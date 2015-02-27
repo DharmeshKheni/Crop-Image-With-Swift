@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="QBV-Y7-d7p">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="cropImageWithLib1" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ESZ-NZ-X4Z">
+                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem title="Take" id="cJn-6d-4DA">
+                                        <connections>
+                                            <action selector="takeBarButtonClick:" destination="BYZ-38-t0r" id="vme-yX-uuf"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="WYE-tb-Mmi"/>
+                                    <barButtonItem title="Open" id="lCm-c2-jgj">
+                                        <connections>
+                                            <action selector="openBarButtonClick:" destination="BYZ-38-t0r" id="E25-7d-YvG"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="LAR-f0-e8u"/>
+                                    <barButtonItem title="Crop" id="Xle-vu-4G3">
+                                        <connections>
+                                            <action selector="cropBarButtonClick:" destination="BYZ-38-t0r" id="MMM-xx-RGu"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="ILB-Ks-hNq"/>
+                                    <barButtonItem title="Save" id="EcZ-SR-jpc">
+                                        <connections>
+                                            <action selector="saveBarButtonClick:" destination="BYZ-38-t0r" id="4fV-9T-jlc"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="2.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="EPo-Y1-qw6">
+                                <rect key="frame" x="0.0" y="64" width="320" height="460"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ESZ-NZ-X4Z" firstAttribute="leading" secondItem="EPo-Y1-qw6" secondAttribute="leading" id="2iA-KE-9Vh"/>
+                            <constraint firstItem="EPo-Y1-qw6" firstAttribute="trailing" secondItem="ESZ-NZ-X4Z" secondAttribute="trailing" id="AvI-NS-bpG"/>
+                            <constraint firstItem="ESZ-NZ-X4Z" firstAttribute="top" secondItem="EPo-Y1-qw6" secondAttribute="bottom" id="Ij2-9D-3iH"/>
+                            <constraint firstItem="ESZ-NZ-X4Z" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="atv-dC-oT7"/>
+                            <constraint firstItem="EPo-Y1-qw6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="bxC-PL-sMj"/>
+                            <constraint firstAttribute="trailing" secondItem="ESZ-NZ-X4Z" secondAttribute="trailing" id="ohk-ax-PUd"/>
+                            <constraint firstItem="EPo-Y1-qw6" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="osp-Vr-LH4"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ubf-1d-8ce"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="imageView" destination="EPo-Y1-qw6" id="uVo-7A-OE0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1217" y="648"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="diz-Pw-vjH">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="QBV-Y7-d7p" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="XhG-SM-RFI">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="8I0-I5-czb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aiR-yf-HPT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="819" y="447"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="2.jpg" width="1080" height="1920"/>
+    </resources>
+</document>
